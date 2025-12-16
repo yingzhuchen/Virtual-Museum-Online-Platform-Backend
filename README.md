@@ -15,7 +15,7 @@ graph TD
     subgraph "Core Services"
         API --> Auth[Authentication Service]
         API --> Exhibit[Exhibition Service]
-        API --> Social[Social Service (Likes/Comments)]
+        API --> Social["Social Service (Likes/Comments)"]
         API --> Rec[Recommendation Engine]
     end
 
@@ -70,22 +70,6 @@ Delivers dynamic content suggestions to drive user retention.
 | **Storage** | Google Cloud Storage | Video & 3D Assets |
 | **Security** | Spring Security + JWT | Authentication |
 | **DevOps** | Docker Compose | Containerization |
-
-## 🔌 API Documentation Highlights
-
-### Search & Discovery
-- `GET /api/search?q={keyword}`: Fuzzy search exhibitions via Elasticsearch.
-- `GET /api/recommendations/feed`: Get dynamic "For You" list based on user profile.
-
-### Social Interactions
-- `POST /api/exhibitions/{id}/like`: Toggle "Like" status.
-- `POST /api/exhibitions/{id}/bookmark`: Add to user collection.
-- `POST /api/exhibitions/{id}/comments`: Post a new comment.
-- `GET /api/exhibitions/{id}/comments`: Retrieve comment threads.
-
-### Luma 3D Generation
-- `POST /api/generate`: Upload video and start 3D conversion.
-
 ## 🚀 Getting Started
 
 ### Prerequisites
